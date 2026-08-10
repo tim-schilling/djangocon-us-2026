@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css" />
+		<link rel="stylesheet" href="dist/reveal.css" />
+		<link rel="stylesheet" href="dist/theme/black.css" />
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="dist/plugin/highlight/monokai.css" />
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
+    <link rel="stylesheet" href="vendor/highlight.js/styles/xcode.css" />
+    <link rel="stylesheet" href="vendor/fonts/poppins/poppins.css" />
+    <style>
+      :root {
+        --r-heading-font: 'Poppins', sans-serif;
+        --r-heading-text-transform: none;
+      }
+      #slide-footer {
+        position: fixed;
+        bottom: 0.75em;
+        left: 0.75em;
+        font-family: var(--r-heading-font);
+        font-size: 1.2em;
+        color: #555;
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slide-footer">Tim Schilling • www.better-simple.com</div>
+		<div class="reveal">
+			<div class="slides">
+				<section>Slide 1</section>
+				<section>Slide 2</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="dist/plugin/notes.js"></script>
+		<script src="dist/plugin/markdown.js"></script>
+		<script src="dist/plugin/highlight.js"></script>
+		<script>
+	      Reveal.initialize({
+        hash: true,
+        width: 1440,
+        height: 753,
+        margin: 0.04,
+        center: false,
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+		</script>
+	</body>
+</html>
