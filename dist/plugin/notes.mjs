@@ -121,38 +121,38 @@ var o = (() => {
 	fences: i,
 	lheading: /^(.+?)\n {0,3}(=+|-+) *(?:\n+|$)/,
 	paragraph: a(g).replace("hr", d).replace("heading", " *#{1,6} *[^\n]").replace("lheading", h).replace("|table", "").replace("blockquote", " {0,3}>").replace("|fences", "").replace("|list", "").replace("|html", "").replace("|tag", "").getRegex()
-}, se = /^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/, ce = /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/, C = /^( {2,}|\\)\n(?!\s*$)/, w = /^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/, T = /[\p{P}\p{S}]/u, E = /[\s\p{P}\p{S}]/u, D = /[^\s\p{P}\p{S}]/u, le = a(/^((?![*_])punctSpace)/, "u").replace(/punctSpace/g, E).getRegex(), O = /(?!~)[\p{P}\p{S}]/u, ue = /(?!~)[\s\p{P}\p{S}]/u, de = /(?:[^\s\p{P}\p{S}]|~)/u, fe = a(/link|precode-code|html/, "g").replace("link", /\[(?:[^\[\]`]|(?<a>`+)[^`]+\k<a>(?!`))*?\]\((?:\\[\s\S]|[^\\\(\)]|\((?:\\[\s\S]|[^\\\(\)])*\))*\)/).replace("precode-", o ? "(?<!`)()" : "(^^|[^`])").replace("code", /(?<b>`+)[^`]+\k<b>(?!`)/).replace("html", /<(?! )[^<>]*?>/).getRegex(), k = /^(?:\*+(?:((?!\*)punct)|([^\s*]))?)|^_+(?:((?!_)punct)|([^\s_]))?/, pe = a(k, "u").replace(/punct/g, T).getRegex(), me = a(k, "u").replace(/punct/g, O).getRegex(), A = "^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)punct(\\*+)(?=[\\s]|$)|notPunctSpace(\\*+)(?!\\*)(?=punctSpace|$)|(?!\\*)punctSpace(\\*+)(?=notPunctSpace)|[\\s](\\*+)(?!\\*)(?=punct)|(?!\\*)punct(\\*+)(?!\\*)(?=punct)|notPunctSpace(\\*+)(?=notPunctSpace)", he = a(A, "gu").replace(/notPunctSpace/g, D).replace(/punctSpace/g, E).replace(/punct/g, T).getRegex(), ge = a(A, "gu").replace(/notPunctSpace/g, de).replace(/punctSpace/g, ue).replace(/punct/g, O).getRegex(), _e = a("^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)punct(_+)(?=[\\s]|$)|notPunctSpace(_+)(?!_)(?=punctSpace|$)|(?!_)punctSpace(_+)(?=notPunctSpace)|[\\s](_+)(?!_)(?=punct)|(?!_)punct(_+)(?!_)(?=punct)", "gu").replace(/notPunctSpace/g, D).replace(/punctSpace/g, E).replace(/punct/g, T).getRegex(), ve = a(/^~~?(?:((?!~)punct)|[^\s~])/, "u").replace(/punct/g, T).getRegex(), ye = a("^[^~]+(?=[^~])|(?!~)punct(~~?)(?=[\\s]|$)|notPunctSpace(~~?)(?!~)(?=punctSpace|$)|(?!~)punctSpace(~~?)(?=notPunctSpace)|[\\s](~~?)(?!~)(?=punct)|(?!~)punct(~~?)(?!~)(?=punct)|notPunctSpace(~~?)(?=notPunctSpace)", "gu").replace(/notPunctSpace/g, D).replace(/punctSpace/g, E).replace(/punct/g, T).getRegex(), be = a(/\\(punct)/, "gu").replace(/punct/g, T).getRegex(), xe = a(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace("scheme", /[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace("email", /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex(), Se = a(y).replace("(?:-->|$)", "-->").getRegex(), j = a("^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>").replace("comment", Se).replace("attribute", /\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex(), M = /(?:\[(?:\\[\s\S]|[^\[\]\\])*\]|\\[\s\S]|`+(?!`)[^`]*?`+(?!`)|``+(?=\])|[^\[\]\\`])*?/, Ce = a(/^!?\[(label)\]\(\s*(href)(?:(?:[ \t]+(?:\n[ \t]*)?|\n[ \t]*)(title))?\s*\)/).replace("label", M).replace("href", /<(?:\\.|[^\n<>\\])+>|[^ \t\n\x00-\x1f]*/).replace("title", /"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/).getRegex(), N = a(/^!?\[(label)\]\[(ref)\]/).replace("label", M).replace("ref", _).getRegex(), P = a(/^!?\[(ref)\](?:\[\])?/).replace("ref", _).getRegex(), we = a("reflink|nolink(?!\\()", "g").replace("reflink", N).replace("nolink", P).getRegex(), F = /[hH][tT][tT][pP][sS]?|[fF][tT][pP]/, I = {
+}, se = /^\\([!"#$%&'()*+,\-./:;<=>?@\[\]\\^_`{|}~])/, ce = /^(`+)([^`]|[^`][\s\S]*?[^`])\1(?!`)/, C = /^( {2,}|\\)\n(?!\s*$)/, le = /^(`+|[^`])(?:(?= {2,}\n)|[\s\S]*?(?:(?=[\\<!\[`*_]|\b_|$)|[^ ](?= {2,}\n)))/, w = /[\p{P}\p{S}]/u, T = /[\s\p{P}\p{S}]/u, E = /[^\s\p{P}\p{S}]/u, ue = a(/^((?![*_])punctSpace)/, "u").replace(/punctSpace/g, T).getRegex(), D = /(?!~)[\p{P}\p{S}]/u, de = /(?!~)[\s\p{P}\p{S}]/u, fe = /(?:[^\s\p{P}\p{S}]|~)/u, pe = a(/link|precode-code|html/, "g").replace("link", /\[(?:[^\[\]`]|(?<a>`+)[^`]+\k<a>(?!`))*?\]\((?:\\[\s\S]|[^\\\(\)]|\((?:\\[\s\S]|[^\\\(\)])*\))*\)/).replace("precode-", o ? "(?<!`)()" : "(^^|[^`])").replace("code", /(?<b>`+)[^`]+\k<b>(?!`)/).replace("html", /<(?! )[^<>]*?>/).getRegex(), O = /^(?:\*+(?:((?!\*)punct)|([^\s*]))?)|^_+(?:((?!_)punct)|([^\s_]))?/, me = a(O, "u").replace(/punct/g, w).getRegex(), he = a(O, "u").replace(/punct/g, D).getRegex(), k = "^[^_*]*?__[^_*]*?\\*[^_*]*?(?=__)|[^*]+(?=[^*])|(?!\\*)punct(\\*+)(?=[\\s]|$)|notPunctSpace(\\*+)(?!\\*)(?=punctSpace|$)|(?!\\*)punctSpace(\\*+)(?=notPunctSpace)|[\\s](\\*+)(?!\\*)(?=punct)|(?!\\*)punct(\\*+)(?!\\*)(?=punct)|notPunctSpace(\\*+)(?=notPunctSpace)", ge = a(k, "gu").replace(/notPunctSpace/g, E).replace(/punctSpace/g, T).replace(/punct/g, w).getRegex(), _e = a(k, "gu").replace(/notPunctSpace/g, fe).replace(/punctSpace/g, de).replace(/punct/g, D).getRegex(), ve = a("^[^_*]*?\\*\\*[^_*]*?_[^_*]*?(?=\\*\\*)|[^_]+(?=[^_])|(?!_)punct(_+)(?=[\\s]|$)|notPunctSpace(_+)(?!_)(?=punctSpace|$)|(?!_)punctSpace(_+)(?=notPunctSpace)|[\\s](_+)(?!_)(?=punct)|(?!_)punct(_+)(?!_)(?=punct)", "gu").replace(/notPunctSpace/g, E).replace(/punctSpace/g, T).replace(/punct/g, w).getRegex(), ye = a(/^~~?(?:((?!~)punct)|[^\s~])/, "u").replace(/punct/g, w).getRegex(), be = a("^[^~]+(?=[^~])|(?!~)punct(~~?)(?=[\\s]|$)|notPunctSpace(~~?)(?!~)(?=punctSpace|$)|(?!~)punctSpace(~~?)(?=notPunctSpace)|[\\s](~~?)(?!~)(?=punct)|(?!~)punct(~~?)(?!~)(?=punct)|notPunctSpace(~~?)(?=notPunctSpace)", "gu").replace(/notPunctSpace/g, E).replace(/punctSpace/g, T).replace(/punct/g, w).getRegex(), xe = a(/\\(punct)/, "gu").replace(/punct/g, w).getRegex(), Se = a(/^<(scheme:[^\s\x00-\x1f<>]*|email)>/).replace("scheme", /[a-zA-Z][a-zA-Z0-9+.-]{1,31}/).replace("email", /[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+(@)[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+(?![-_])/).getRegex(), Ce = a(y).replace("(?:-->|$)", "-->").getRegex(), A = a("^comment|^</[a-zA-Z][\\w:-]*\\s*>|^<[a-zA-Z][\\w-]*(?:attribute)*?\\s*/?>|^<\\?[\\s\\S]*?\\?>|^<![a-zA-Z]+\\s[\\s\\S]*?>|^<!\\[CDATA\\[[\\s\\S]*?\\]\\]>").replace("comment", Ce).replace("attribute", /\s+[a-zA-Z:_][\w.:-]*(?:\s*=\s*"[^"]*"|\s*=\s*'[^']*'|\s*=\s*[^\s"'=<>`]+)?/).getRegex(), j = /(?:\[(?:\\[\s\S]|[^\[\]\\])*\]|\\[\s\S]|`+(?!`)[^`]*?`+(?!`)|``+(?=\])|[^\[\]\\`])*?/, we = a(/^!?\[(label)\]\(\s*(href)(?:(?:[ \t]+(?:\n[ \t]*)?|\n[ \t]*)(title))?\s*\)/).replace("label", j).replace("href", /<(?:\\.|[^\n<>\\])+>|[^ \t\n\x00-\x1f]*/).replace("title", /"(?:\\"?|[^"\\])*"|'(?:\\'?|[^'\\])*'|\((?:\\\)?|[^)\\])*\)/).getRegex(), M = a(/^!?\[(label)\]\[(ref)\]/).replace("label", j).replace("ref", _).getRegex(), N = a(/^!?\[(ref)\](?:\[\])?/).replace("ref", _).getRegex(), P = a("reflink|nolink(?!\\()", "g").replace("reflink", M).replace("nolink", N).getRegex(), F = /[hH][tT][tT][pP][sS]?|[fF][tT][pP]/, I = {
 	_backpedal: i,
-	anyPunctuation: be,
-	autolink: xe,
-	blockSkip: fe,
+	anyPunctuation: xe,
+	autolink: Se,
+	blockSkip: pe,
 	br: C,
 	code: ce,
 	del: i,
 	delLDelim: i,
 	delRDelim: i,
-	emStrongLDelim: pe,
-	emStrongRDelimAst: he,
-	emStrongRDelimUnd: _e,
+	emStrongLDelim: me,
+	emStrongRDelimAst: ge,
+	emStrongRDelimUnd: ve,
 	escape: se,
-	link: Ce,
-	nolink: P,
-	punctuation: le,
-	reflink: N,
-	reflinkSearch: we,
-	tag: j,
-	text: w,
+	link: we,
+	nolink: N,
+	punctuation: ue,
+	reflink: M,
+	reflinkSearch: P,
+	tag: A,
+	text: le,
 	url: i
 }, Te = {
 	...I,
-	link: a(/^!?\[(label)\]\((.*?)\)/).replace("label", M).getRegex(),
-	reflink: a(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label", M).getRegex()
+	link: a(/^!?\[(label)\]\((.*?)\)/).replace("label", j).getRegex(),
+	reflink: a(/^!?\[(label)\]\s*\[([^\]]*)\]/).replace("label", j).getRegex()
 }, L = {
 	...I,
-	emStrongRDelimAst: ge,
-	emStrongLDelim: me,
-	delLDelim: ve,
-	delRDelim: ye,
+	emStrongRDelimAst: _e,
+	emStrongLDelim: he,
+	delLDelim: ye,
+	delRDelim: be,
 	url: a(/^((?:protocol):\/\/|www\.)(?:[a-zA-Z0-9\-]+\.?)+[^\s<]*|^email/).replace("protocol", F).replace("email", /[A-Za-z0-9._+-]+(@)[a-zA-Z0-9-_]+(?:\.[a-zA-Z0-9-_]*[a-zA-Z0-9])+(?![-_])/).getRegex(),
 	_backpedal: /(?:[^?!.,:;*_'"~()&]+|\([^)]*\)|&(?![a-zA-Z0-9]+;$)|[?!.,:;*_'"~)]+(?!$))+/,
 	del: /^(~~?)(?=[^\s~])((?:\\[\s\S]|[^\\])*?(?:\\[\s\S]|[^\s~\\]))\1(?=[^~]|$)/,
@@ -1442,7 +1442,7 @@ var je = () => {
 		}
 	}
 	function a(e) {
-		n && !n.closed ? n.focus() : (n = e, window.addEventListener("message", u), d());
+		n && !n.closed ? n.focus() : (n = e, window.addEventListener("message", d), f());
 	}
 	function o() {
 		let e = r.getConfig().url, i = typeof e == "string" ? e : window.location.protocol + "//" + window.location.host + window.location.pathname + window.location.search;
@@ -1453,7 +1453,7 @@ var je = () => {
 				state: r.getState(),
 				url: i
 			}), "*");
-		}, 500), window.addEventListener("message", u);
+		}, 500), window.addEventListener("message", d);
 	}
 	function s(e, t, i) {
 		let a = r[e].apply(r, t);
@@ -1465,35 +1465,38 @@ var je = () => {
 		}), "*");
 	}
 	function c(e) {
+		return e.split("\n").map((e) => e.trim()).join("\n").trim();
+	}
+	function l(e) {
 		let t = r.getCurrentSlide(), i = t.querySelectorAll("aside.notes"), a = t.querySelector(".current-fragment"), o = {
 			namespace: "reveal-notes",
 			type: "state",
 			notes: "",
 			markdown: !1,
-			whitespace: "normal",
+			whitespace: "pre-wrap",
 			state: r.getState()
 		};
 		if (t.hasAttribute("data-notes") && (o.notes = t.getAttribute("data-notes"), o.whitespace = "pre-wrap"), a) {
 			let e = a.querySelector("aside.notes");
-			e ? (o.notes = e.innerHTML, o.markdown = typeof e.getAttribute("data-markdown") == "string", i = null) : a.hasAttribute("data-notes") && (o.notes = a.getAttribute("data-notes"), o.whitespace = "pre-wrap", i = null);
+			e ? (o.notes = c(e.innerHTML), o.markdown = typeof e.getAttribute("data-markdown") == "string", i = null) : a.hasAttribute("data-notes") && (o.notes = a.getAttribute("data-notes"), o.whitespace = "pre-wrap", i = null);
 		}
-		i && i.length && (i = Array.from(i).filter((e) => e.closest(".fragment") === null), o.notes = i.map((e) => e.innerHTML).join("\n"), o.markdown = i[0] && typeof i[0].getAttribute("data-markdown") == "string"), n.postMessage(JSON.stringify(o), "*");
+		i && i.length && (i = Array.from(i).filter((e) => e.closest(".fragment") === null), o.notes = i.map((e) => c(e.innerHTML)).join("\n"), o.markdown = i[0] && typeof i[0].getAttribute("data-markdown") == "string"), n.postMessage(JSON.stringify(o), "*");
 	}
-	function l(e) {
+	function u(e) {
 		try {
 			return window.location.origin === e.source.location.origin;
 		} catch {
 			return !1;
 		}
 	}
-	function u(e) {
-		if (l(e)) try {
+	function d(e) {
+		if (u(e)) try {
 			let n = JSON.parse(e.data);
-			n && n.namespace === "reveal-notes" && n.type === "connected" ? (clearInterval(t), d()) : n && n.namespace === "reveal-notes" && n.type === "call" && s(n.methodName, n.arguments, n.callId);
+			n && n.namespace === "reveal-notes" && n.type === "connected" ? (clearInterval(t), f()) : n && n.namespace === "reveal-notes" && n.type === "call" && s(n.methodName, n.arguments, n.callId);
 		} catch {}
 	}
-	function d() {
-		r.on("slidechanged", c), r.on("fragmentshown", c), r.on("fragmenthidden", c), r.on("overviewhidden", c), r.on("overviewshown", c), r.on("paused", c), r.on("resumed", c), r.on("previewiframe", c), r.on("previewimage", c), r.on("previewvideo", c), r.on("closeoverlay", c), c();
+	function f() {
+		r.on("slidechanged", l), r.on("fragmentshown", l), r.on("fragmenthidden", l), r.on("overviewhidden", l), r.on("overviewshown", l), r.on("paused", l), r.on("resumed", l), r.on("previewiframe", l), r.on("previewimage", l), r.on("previewvideo", l), r.on("closeoverlay", l), l();
 	}
 	return {
 		id: "notes",

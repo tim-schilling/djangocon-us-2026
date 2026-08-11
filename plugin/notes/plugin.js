@@ -103,6 +103,16 @@ const Plugin = () => {
 	}
 
 	/**
+	 * Strips the leading indentation that authoring the notes as
+	 * indented HTML introduces, so pre-wrap doesn't render it.
+	 */
+	function normalizeNotesWhitespace( html ) {
+
+		return html.split( '\n' ).map( line => line.trim() ).join( '\n' ).trim();
+
+	}
+
+	/**
 	 * Posts the current slide data to the notes window.
 	 */
 	function post( event ) {
@@ -116,7 +126,7 @@ const Plugin = () => {
 			type: 'state',
 			notes: '',
 			markdown: false,
-			whitespace: 'normal',
+			whitespace: 'pre-wrap',
 			state: deck.getState()
 		};
 
@@ -130,7 +140,7 @@ const Plugin = () => {
 		if( fragmentElement ) {
 			let fragmentNotes = fragmentElement.querySelector( 'aside.notes' );
 			if( fragmentNotes ) {
-				messageData.notes = fragmentNotes.innerHTML;
+				messageData.notes = normalizeNotesWhitespace( fragmentNotes.innerHTML );
 				messageData.markdown = typeof fragmentNotes.getAttribute( 'data-markdown' ) === 'string';
 
 				// Ignore other slide notes
@@ -151,7 +161,7 @@ const Plugin = () => {
 			// individually when stepping through fragments
 			notesElements = Array.from( notesElements ).filter( notesElement => notesElement.closest( '.fragment' ) === null );
 
-			messageData.notes = notesElements.map( notesElement => notesElement.innerHTML ).join( '\n' );
+			messageData.notes = notesElements.map( notesElement => normalizeNotesWhitespace( notesElement.innerHTML ) ).join( '\n' );
 			messageData.markdown = notesElements[0] && typeof notesElements[0].getAttribute( 'data-markdown' ) === 'string';
 		}
 
